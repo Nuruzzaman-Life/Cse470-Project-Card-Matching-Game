@@ -17,11 +17,11 @@ public class Menu : MonoBehaviour
         if(PlayerPrefs.GetInt("SoundStatus",0)==0){
             
             soundIcon.sprite=soundOn;
-            FindObjectOfType<SFXManager>().UpdateVolume();
+            //FindObjectOfType<SFXManager>().UpdateVolume();
         }else if(PlayerPrefs.GetInt("SoundStatus",0)==-1){
             
             soundIcon.sprite=soundOff;
-            FindObjectOfType<SFXManager>().Mute();
+            //FindObjectOfType<SFXManager>().Mute();
         }
     }
     public void StartPlaying(int mode){
@@ -39,12 +39,13 @@ public class Menu : MonoBehaviour
         if(PlayerPrefs.GetInt("SoundStatus",0)==0){
             PlayerPrefs.SetInt("SoundStatus",-1);
             soundIcon.sprite=soundOff;
-            FindObjectOfType<SFXManager>().Mute();
+            //FindObjectOfType<SFXManager>().Mute();
         }else if(PlayerPrefs.GetInt("SoundStatus",0)==-1){
             PlayerPrefs.SetInt("SoundStatus",0);
             soundIcon.sprite=soundOn;
-            FindObjectOfType<SFXManager>().UpdateVolume();
+            //FindObjectOfType<SFXManager>().UpdateVolume();
         }
-        FindObjectOfType<SFXManager>().Play("buttonClick");
+        //FindObjectOfType<SFXManager>().Play("buttonClick");
+        
     }
 }

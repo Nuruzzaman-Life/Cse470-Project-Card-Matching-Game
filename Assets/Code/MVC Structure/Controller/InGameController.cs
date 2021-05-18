@@ -87,7 +87,7 @@ public class InGameController : MonoBehaviour
         gameObject.SetActive(false);
         gamePanel.SetActive(false);
         winPanel.SetActive(false);
-        FindObjectOfType<SFXManager>().Play("buttonClick");
+        //FindObjectOfType<SFXManager>().Play("buttonClick");
     }
     public void RestartGame(){
         currentTime=0;

@@ -48,7 +48,7 @@ public class CardController : MonoBehaviour
             igc.gameFinished=true;
             startCountDown=true;
             timer=0;
-            FindObjectOfType<SFXManager>().Play("buttonClick");
+            //FindObjectOfType<SFXManager>().Play("buttonClick");
         }else{
             
             RandomizeIcons();
@@ -171,7 +171,7 @@ public class CardController : MonoBehaviour
     {
         if(cards[index].sprite==defaultIcon)
         {
-            FindObjectOfType<SFXManager>().Play("cardClick");
+            //FindObjectOfType<SFXManager>().Play("cardClick");
             cards[index].sprite=icons[cardMemory[index]];
             if(openCards.Count==1)
             {
@@ -187,7 +187,7 @@ public class CardController : MonoBehaviour
                         FindObjectOfType<InGameController>().CheckRecordTime();
                         
                         
-                        FindObjectOfType<SFXManager>().Play("win");
+                        //FindObjectOfType<SFXManager>().Play("win");
                         Invoke("ShowWinPanel", winDelayTime);
                     }
                 }
@@ -215,7 +215,7 @@ public class CardController : MonoBehaviour
         if(cards[list[0]].sprite==cards[list[1]].sprite){
             cardsChild[list[0]].SetActive(true);
             cardsChild[list[1]].SetActive(true);
-            FindObjectOfType<SFXManager>().Play("cardMatch");
+            //FindObjectOfType<SFXManager>().Play("cardMatch");
             return true;
         }else return false;
         
@@ -243,7 +243,7 @@ public class CardController : MonoBehaviour
         FindObjectOfType<InGameController>().UpdateAttempt(attempt);
         matchedCardsNumber=0;
         igc.gameFinished=false;
-        FindObjectOfType<SFXManager>().Play("startGame");
+        //FindObjectOfType<SFXManager>().Play("startGame");
     }
     public void HideCardChild(){
         for (int i=0; i<cards.Length;i++)

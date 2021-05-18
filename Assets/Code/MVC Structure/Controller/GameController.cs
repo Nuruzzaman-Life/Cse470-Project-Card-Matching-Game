@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class GameController : MonoBehaviour
 {
     // Start is called before the first frame update
+    
     public void CardTap(Button button){
         char[] name = button.name.ToCharArray();
         string retrivedName = null;
